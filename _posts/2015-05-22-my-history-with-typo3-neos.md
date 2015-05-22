@@ -14,4 +14,9 @@ published: true
 Первым делом надо прочитать правильную документацию (улыбка)
 [ссылка](http://docs.typo3.org/flow/TYPO3FlowDocumentation/TheDefinitiveGuide/PartII/Kickstart.html)
 
-Оказывается packegeнужно было делать командой `./flow package:create` а командой `./flow kickstart:package`
+Оказывается packege нужно было делать не командой 
+`./flow package:create`
+а командой 
+`./flow kickstart:package`
+В итоге пришлось удалить контейнеры docker'а:
+`docker-compose rm -v`
