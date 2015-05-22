@@ -12,6 +12,6 @@ published: true
 ### Read rigt documentation topic
 
 Первым делом надо прочитать правильную документацию (улыбка)
-http://docs.typo3.org/flow/TYPO3FlowDocumentation/TheDefinitiveGuide/PartII/Kickstart.html
+[ссылка](http://docs.typo3.org/flow/TYPO3FlowDocumentation/TheDefinitiveGuide/PartII/Kickstart.html)
 
 Оказывается packegeнужно было делать командой `./flow package:create` а командой `./flow kickstart:package`
