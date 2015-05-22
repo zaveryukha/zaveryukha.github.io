@@ -1,0 +1,22 @@
+# Site settings
+title: "Yuri Zaveryukha"
+moto: "SAP development with Love"
+email: zaveryukha@gmail.com
+description: "Reflections on modern web development techniques."
+baseurl: ""
+url: "http://zaveryukha.github.io"
+twitter_username: zaveryukha
+github_username:  zaveryukha
+host: instagr.am/zaveryukha
+
+sass:
+  style: :expanded # You might prefer to minify using :compressed
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+analytics :
+  provider : google
+  google : 
+      tracking_id : 'UA-63302122-1'

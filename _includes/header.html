@@ -1,0 +1,16 @@
+<header class="Header">
+
+  <div class="FixedWidth">
+    <div class="SiteTitle">
+        <a class="SiteTitle-Link" href="{{ site.baseurl }}/">{{ site.title }}</a>
+        <div class="SiteTitle-Moto" href="{{ site.baseurl }}/">{{ site.moto }}</div>
+    </div>
+    <nav class="Nav">
+        {% for page in site.pages %}
+          {% if page.title %}<a class="Nav-Link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
+        {% endfor %}
+    </nav>
+
+  </div>
+
+</header>

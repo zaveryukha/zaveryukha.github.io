@@ -1,0 +1,195 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+@import "highlight";
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url(/assets/fonts/FiraSans-Regular.woff);
+}
+@font-face {
+    font-family: 'Fira Sans';
+    font-style: italic;
+    src: url(/assets/fonts/FiraSans-Italic.woff);
+}
+@font-face {
+    font-family: 'Fira Sans';
+    font-weight: bold;
+    src: url(/assets/fonts/FiraSans-Bold.woff);
+}
+@font-face {
+    font-family: 'Fira Sans';
+    font-weight: 300;
+    src: url(/assets/fonts/FiraSans-Light.woff);
+}
+
+
+
+/*Colors*/
+$Gray--Dark: #111;
+$Gray: #666;
+$Gray--Light: #aaa;
+$Gray--Line: #ccc;
+
+
+/*Resets*/
+body{
+  font-family: 'Fira Sans', sans-serif;
+  text-rendering: optimizeLegibility;
+  font-size: 100%;
+  margin: 0;
+}
+
+p,h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+code{
+    overflow-wrap: break-word;
+    white-space: pre;
+    color: $Gray--Light;
+}
+.highlight code {
+    color: initial;
+}
+
+/*Settings*/
+$u: 12px;
+
+/*Utility classes*/
+.FixedWidth{
+    max-width: 824px;
+    margin: 0 auto;
+    padding: 0 $u;
+}
+
+/*Atoms*/
+.H1,.H2,.H3,.H4,.H5,.H6 {
+    line-height: 1.2;
+    margin-top: 1.5em;
+    margin-bottom: $u;
+}
+.H1 {font-size: 60px;
+    font-weight: bold;
+}
+.H2 {font-size: 46px;}
+.H3 {font-size: 29px;}
+/* We don't use these*/
+.H4 {font-size: 21px;}
+.H5 {font-size: 18px;}
+.H6 {font-size: 14px;}
+
+.Paragraph {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: $u 0;
+}
+
+.Link {
+    text-decoration: underline;
+    &:hover {
+    	color: $Gray--Light;
+    }
+}
+
+.List {
+    list-style-type: disc;
+    padding-left: 2*$u;
+}   
+
+
+.MarkDown{
+    h1{@extend .H1;}
+    h2{@extend .H2;}
+    h3{@extend .H3;}
+    h4{@extend .H4;}
+    h5{@extend .H5;}
+    h6{@extend .H6;}
+    p{@extend .Paragraph;}
+    a{@extend .Link;}
+	ul{@extend .List;}
+    hr{
+        border: solid 1px $Gray--Line;
+        border-bottom: none;
+    }
+}
+
+/*Molecules*/
+.SiteTitle{
+    float: left;
+}
+.SiteTitle-Link{
+    @extend .H3;
+    font-weight: bold;
+    line-height: 1;
+}
+.SiteTitle-Moto{
+    @extend .H6;
+    color: $Gray--Light;
+    font-weight: 300;
+    line-height: 1;
+    margin: 0;
+}
+
+.Nav{
+    float: right;
+}
+
+.Media{
+    @extend .H4;
+    margin: 2*$u 0;
+    position: relative;
+}
+    .Media-Date {
+        color: $Gray--Light;
+        text-align: right;
+        margin-right: $u;
+        width: 11*$u;
+        font-weight: 300;
+        display: inline-block;
+    }
+
+.Social{
+    width: 2*$u;
+    height: 2*$u;
+    float: left;
+    margin-left: $u;
+}
+
+// Organisms
+.Header{
+    overflow: hidden;
+    margin-top: $u;
+    margin-bottom: 4*$u;
+}
+
+.PostsList{
+    margin-bottom: 4*$u;
+}
+
+.PostContent{
+    margin: 4*$u 0;
+}
+.PostHeader-Meta{
+    color: $Gray--Light;
+}
+
+.Footer-Right > *{
+    float: right;
+    clear: both;
+}
