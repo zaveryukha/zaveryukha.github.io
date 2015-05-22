@@ -15,4 +15,5 @@ published: true
 4. Change Ubuntu partition. We need more space for `docker` 
    to do this - [watch this video](http://www.youtube.com/watch?v=r_UyKufXR3c)
    or [this](http://www.youtube.com/watch?v=ikSIDI535L0)
-5. Go to [SfiDistr](https://github.com/sfi-ru/SfiDistr)
+5. Install [docker](https://docs.docker.com/installation/ubuntulinux/)
+6. Install [docker-compose](https://docs.docker.com/compose/install/)
