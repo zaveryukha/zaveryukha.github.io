@@ -1,15 +1,13 @@
 ---
 layout: post
-title: MSetting up the environment for NEOS development
+title: Setting up the environment for NEOS development
 date: 2015-05-15 16:43:23
 tags: neos
 comments: true
 published: true
 ---
 
-## Setting up the environment for NEOS development
-
-### Ubuntu in VirtualBox
+## Ubuntu in VirtualBox
 
 1. Download VirtualBox.
 2. Download Ubuntu lates ISO.
