@@ -60,5 +60,6 @@ Last login: Tue May 26 14:13:00 2015
  == VHOSTS: neos dev.neos behat.dev.neos
  =======================================================================
 
-[www@f37ca5ebc702 : ~/typo3-app]$
+[www@f37ca5ebc702 : ~/typo3-app]$ 
+
 ```
