@@ -43,23 +43,10 @@ RSA host key for [192.168.59.103]:1122 has changed and you have requested strict
 Host key verification failed.
 ```
 
-Решение:
+Решение
 ```
 localhost:neos john_doe$ cd ~
 localhost:~ john_doe$ rm .ssh/known_hosts
-localhost:~ john_doe$ ssh -p1122 www@192.168.59.103
-The authenticity of host '[192.168.59.103]:1122 ([192.168.59.103]:1122)' can't be established.
-RSA key fingerprint is **:**:**:**:**:**:**:**:**:**:**:**:**:**:**:**.
-Are you sure you want to continue connecting (yes/no)? yes
-Warning: Permanently added '[192.168.59.103]:1122' (RSA) to the list of known hosts.
-Last login: Tue May 26 14:13:00 2015
-
- =======================================================================
- == TYPO3-APP / 2.0 branch
- == WEB CONTAINER IP:  172.17.0.4
- == VHOSTS: neos dev.neos behat.dev.neos
- =======================================================================
-
-[www@f37ca5ebc702 : ~/typo3-app]$ 
-
 ```
+
+При следующем заходе система попросит подтвердить вход.
