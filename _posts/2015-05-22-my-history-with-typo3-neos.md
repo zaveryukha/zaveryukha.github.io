@@ -9,24 +9,29 @@ published: true
 
 ## Day 1
 
-### Read rigt documentation topic
+### Read right documentation topic
 
-Первым делом надо прочитать правильную документацию (улыбка)
-[ссылка](http://docs.typo3.org/flow/TYPO3FlowDocumentation/TheDefinitiveGuide/PartII/Kickstart.html)
+Issue: After adding package to project web container failed to start
 
-Оказывается packege нужно было делать не командой 
-`./flow package:create`
-а командой 
-`./flow kickstart:package`
-В итоге пришлось удалить контейнеры docker'а:
+First of all you should read right documentation topic (smile)
+[link](http://docs.typo3.org/flow/TYPO3FlowDocumentation/TheDefinitiveGuide/PartII/Kickstart.html)
+
+For creating a package I used the command
+```./flow package:create```
+
+Solution:
+```./flow kickstart:package```
+But this doesn't solve issue with starting of the web container.
+I had to remove docker containers:
 `docker-compose rm -v`
 
 ## Day 2
 
 ### Google it!
 
-При попытке войти по ssh вылезла ошибка
-```
+Issue: access to container by ssh not working.
+
+{% highlight bash %}
 localhost:neos john_doe$ ssh -p1122 www@192.168.59.103
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
@@ -41,12 +46,10 @@ Add correct host key in /Users/john_doe/.ssh/known_hosts to get rid of this mess
 Offending RSA key in /Users/john_doe/.ssh/known_hosts:6
 RSA host key for [192.168.59.103]:1122 has changed and you have requested strict checking.
 Host key verification failed.
-```
+{% endhighlight %}
 
-Решение
+Solution:
 ```
 localhost:neos john_doe$ cd ~
 localhost:~ john_doe$ rm .ssh/known_hosts
 ```
-
-При следующем заходе система попросит подтвердить вход.

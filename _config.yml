@@ -7,7 +7,7 @@ baseurl: ""
 url: "http://zaveryukha.github.io"
 twitter_username: zaveryukha
 github_username:  zaveryukha
-host: instagr.am/zaveryukha
+host: 127.0.0.1
 
 sass:
   style: :expanded # You might prefer to minify using :compressed
